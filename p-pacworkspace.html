@@ -172,8 +172,8 @@
             </button>
         </div>
 
-        <!-- CREATE / SUBMIT WORK BUTTON (UPDATED) -->
-        <a href="https://script.google.com/macros/s/AKfycbxcE64x4vMA_Xmi2w5AYUAsoLM-oxBt_XTKfYSxQZZmeHDvG-nQN9-BG2ze0NF7AgJMcA/exec" target="workspaceFrame" title="สร้างงานใหม่/ส่งตรวจ" class="flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-white/80 backdrop-blur-xl hover:bg-blue-50 hover:border-blue-100 hover:text-blue-600 border border-white transition-all duration-500 text-slate-600 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] cursor-pointer group shrink-0 no-underline">
+        <!-- CREATE / SUBMIT WORK BUTTON (UPDATED: target changed to _blank to fix connection refusal) -->
+        <a href="https://script.google.com/macros/s/AKfycbxcE64x4vMA_Xmi2w5AYUAsoLM-oxBt_XTKfYSxQZZmeHDvG-nQN9-BG2ze0NF7AgJMcA/exec" target="_blank" title="สร้างงานใหม่/ส่งตรวจ" class="flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-white/80 backdrop-blur-xl hover:bg-blue-50 hover:border-blue-100 hover:text-blue-600 border border-white transition-all duration-500 text-slate-600 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] cursor-pointer group shrink-0 no-underline">
             <i data-lucide="file-edit" class="w-4 h-4 transition-transform duration-500 group-hover:scale-110"></i>
             <span class="font-medium text-sm tracking-wide whitespace-nowrap">สร้างงานใหม่/ส่งตรวจ</span>
         </a>
@@ -188,6 +188,7 @@
     </div>
 
     <!-- Iframe Content -->
+    <!-- Note: If the src link below also shows "refused to connect", you must add .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL) to that specific Google Apps Script -->
     <iframe 
       name="workspaceFrame"
       id="workspaceFrame"
